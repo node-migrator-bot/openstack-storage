@@ -21,7 +21,7 @@ suite('StorageTests', function(){
     configFile = path.join(__dirname,'../config/testconfig.json');
     async.series([
       function (cb) {
-        path.exists(configFile, function (configPresent) {
+        fs.exists(configFile, function (configPresent) {
           var err;
           if (configPresent) {
             config = require(configFile);
